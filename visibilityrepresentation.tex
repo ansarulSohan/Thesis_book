@@ -1,0 +1,262 @@
+\chapter{Visibility Representations \& 2-Planar Graphs}\label{visibility}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\section{Introduction}
+
+In this chapter, we discuss about visibility Representations , Visibility Representations of 1 planar graph and 2-planar graph which is related to our thesis.In \Cref{sec:vr} we define about visibility representations of planar graph , in \Cref{sec:1vr} we define 1-visibility representations and bar 1-visibility representations of 1-planar graph and in \Cref{sec:2pg} we define about 2-planar graphs.
+
+
+
+
+
+
+\section{Visibility Representations of Planar Graphs}
+\label{sec:vr}
+
+In Bar Visibility Representation \cite{R} the vertices correspond to horizontal line segments, called bars and the edges correspond to vertical lines line segments, called bars.
+In the \Cref{fig:v} (a) is a planar graph G, and (b) is the bar visibility representation of G, if there exists a one-to-one correspondence between vertices of G and bars in (b) , such that there is an edge between two vertices in G if and only if there exists an unobstructed vertical line of sight between their corresponding bars. 
+\\
+Tamassia \& Tollis \cite{R} develop a linear-time algorithm for Visibility Representation of a planar graph.
+
+
+\begin{theorem} The algorithm VISIBILITY correctly computes a visibility
+representation of a graph $G$.
+\end{theorem}
+
+
+\begin{algorithm}[H] 
+
+input : { A planar graph $G$} \\
+output : {Visibility Representation of planar graph $G$}
+
+\caption{Visibility Representation}
+\label{vr}
+
+\begin{algorithmic}[1]
+\STATE Construct a planar st-graph $G$
+\STATE Assign unit weights to the edges of $G$ and compute st-numbering $Y$ of $G$.
+\STATE Assign unit weights to the edges of $G$ and compute optimal topological numbering $X$ of $G$
+\STATE For each vertex $v$, draw the vertex-segment $T(v)$ at y-coordinate $Y(v)$ and between x-coordinates $X(left(v))$ and $X(right(v)-1)$.
+\STATE For each edge $e$, draw the edge-segment $T(e)$ at x-coordinate $X (left(e))$ between y-coordinates $Y$ $(orig(e))$ and $Y(dest(e))$.
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{80mm}{!}{\input{figures/barvisidual.pdf_tex}}
+\caption{Planar Graph G, its dual $G^{*}$}
+\label{fig:barvisidual}
+\end{figure}
+
+
+
+
+In \Cref{fig:barvisidual} we draw a planar st-graph $G$ and construct a dual graph $G^{*}$ on the planar graph so that we can define the inner and outer face of the planar graph.
+\\
+In \Cref{fig:barvisi} (a) we draw a straight line drawing for the dual graph $G^{*}$ for representing the edge segments of planar graph $G$.
+\\
+In \Cref{fig:barvisi} (c) we draw a Grid drawing for planar graph $G$ where vertices are all located at grid points of an integer grid so that we can represent the vertex segment and finally \Cref{fig:barvisi} (b) is a visibility representation for the planar graph $G$.
+
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{100mm}{!}{\input{figures/barvisi.pdf_tex}}
+\caption{(a) A dual graph $G^{*}$ ; (b) Visibility representation of graph $G$ ; (c) Graph $G$}
+\label{fig:barvisi}
+\end{figure}
+
+
+
+\section{Visibility Representations of 1-Planar Graphs}
+\label{sec:1vr}
+
+
+In 1 Visibility Representation, each edge-segment crosses at most one vertex-segment and each vertex-segment is crossed by at most one edge-segment and graphs are drawn such that each edge is crossed at most once\cite{FJ}, and specializes bar 1-visibility where vertex-segments can be crossed many times vertex-segments can be crossed many times. \Cref{fig:1vvv}, is showing 1-planar graph and its bar 1-visibility representations,where dotted edges are representing the 1-planar crossing points and dotted vertices represents the vertex-expansion for representing bar 1-visibility representations. 
+\\
+Franz J. Brandenburg \cite{FJ} have developed an algorithm for \emph{1-Visibility Representations of 1-Planar Graphs} and given the following theorem.
+
+\begin{theorem} 
+
+There is a linear time algorithm to construct a 1-visibility representation of an embedded 1-planar graph on a grid of size at most $(8n-20) \times (n-1)$.
+
+\end{theorem}
+
+
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/1vvv.pdf_tex}}
+\caption{(a) A 1-planar graph ; (b) Remove all crossing-points from graph ; (c) Add extra edge according to rule ; (d) st-numbering Planar Graph ; (e) Visibility Representations of the Planar Graph ; (f) Bar 1-Visibility Representations of 1-Planar Graph.}
+\label{fig:1vvv}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{2-Planar Graphs}
+\label{sec:2pg}
+
+A graph is called a 2-Planar Graph if it can be drawn in the plane in such a way so that each its edge is crossed by at most two other edge. A 2-planar graph is a graph that has a 2-planar drawing.
+Pach and Toth have shown that 2-planar graphs with $n$ vertices have at most $5n-10$ edges and this bound is tight. 2-planar graph is a connected graph.
+\\
+\textbf{Hermits} are vertices of degree 1 or 2 which are enclosed by crossing edges and cannot be connected to other vertices. \Cref{fig:2p} (a) shows simple 2-Planar Graph and (b) shows 2-Planar Graph with dot Hermits vertics.
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{150mm}{!}{\input{figures/2p.pdf_tex}}
+\caption{(a) A 2-Planar Graph ; (b) A 2-Planar Graph with Hermits vertices.}
+\label{fig:2p}
+\end{figure}
+
+
+\subsection{Configurations of 2-Planar Graphs}
+\label{sec:c2pg}
+Since 2-planar graph is a non-planar graph , its configuration is complex. We know that there are only 3 configurations in 1-planar graph \cite{alam}. But 2-planar graphs may have many configurations. we follow \cite{michael}\cite{Christopher} and represents the configuration of 2-planar graphs into some specific layer. We represents the 2-planar configurations into following 2 parts.
+\begin{itemize}
+\item  Simple Configuration
+\item  Multi-Configuration
+\end{itemize}
+
+
+\subsubsection{Simple Configuration}
+
+After deleting any edge or deleting any crossing node from the graph ,the configuration becomes 1-planar or planar in the Simple Configuration. Simple Configurations can be divided into 3 following parts.
+
+\begin{enumerate}
+
+\item {\textbf{2-planar with 2 edges:\\}}
+In the configuration of 2-planar with 2 edges, Two edges are crossing to each other and both are crossing each other at most 2 times.
+\Cref{fig:2planarwith2edges} shows that 2-planar crossing occur between 2 edges.
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2planarwith2edges.pdf_tex}}
+\caption{2-planar configuration with 2-edges.}
+\label{fig:2planarwith2edges}
+\end{figure}
+
+
+\item {\textbf{2-planar with 3 edges:\\}}
+In 2-planar with 3 edges crossing, 3 edges are crossed in such a way that either 2 edges are crossed by 1 edges where 2 edges are crossed 1 times and 1 edges are crossed 2 times by 2 edges or 3 edges are crossed by eachother in such a way so that they are crossed eachother at most 2 times.
+
+\Cref{fig:2planarwith3edges} shows that 2-planar crossing occur between 3 edges.
+
+\begin{figure}[!tb]
+\centering
+\resizebox{100mm}{!}{\input{figures/2planarwith3edges.pdf_tex}}
+\caption{2-planar configuration with 3-edges}
+\label{fig:2planarwith3edges}
+\end{figure}
+
+
+\item {\textbf{2-planar with 4 edges:\\}}
+In 2-planar with 4 edges configuration, all edges are connected eachother at most 2 times.
+\Cref{fig:2planarwith4edges} shows that 2-planar crossing occur between 4 edges.
+\begin{figure}[!tb]
+\centering
+\resizebox{60mm}{!}{\input{figures/2planarwith4edges.pdf_tex}}
+\caption{2-planar configuration with 4-edges}
+\label{fig:2planarwith4edges}
+\end{figure}
+\end{enumerate}
+
+\subsubsection{Multi-Configuration}
+If the graph is still two planar after removing a crossing point from 2-planar graph's configuration, the configuration will call Multi-Conguration of 2-planar graph(\Cref{fig:multiconfiguration}). Multi-configuration is occured when a face has $\geq 5$ edges.
+
+\begin{figure}[!tb]
+\centering
+\resizebox{100mm}{!}{\input{figures/multiconfiguration.pdf_tex}}
+\caption{Multi-configuration}
+\label{fig:multiconfiguration}
+\end{figure}
+
+In \Cref{fig:starmulti} , we can see if we delete crossing node from the configuration \Cref{fig:starmulti}(b) , The configuration is still remain 2-planar (\Cref{fig:starmulti}(c)). 
+Every 2-planar with odd number edges configuration has 2-planar with 3 edges configuration and there has no 2-planar with 3 edges configuration of 2-planar with even number edges configuration.
+\begin{figure}[!tb]
+\centering
+\resizebox{100mm}{!}{\input{figures/starmulti.pdf_tex}}
+\caption{Multi-Configuration to Simple Configuration.}
+\label{fig:starmulti}
+\end{figure}
+
+
+\begin{lemma}
+
+Let $E(G)$ be a maximal 2-planar embedding. Then any edges are crossing at most 2 times. 
+
+\end{lemma}
+
+
+
+
+\begin{lemma}
+
+Let $E(G)$ be a maximal 2-planar embedding. Then with 5 vertices and 5 edges muli-configuration (inner face or outer face) is a complete configuration. 
+
+\end{lemma}
+
+\begin{proof}
+
+If any face is consist of 5 vertices, They can be crossing each other with at most 5 edges and each vertex will have degree 4. Every edges crossing each other 2 times. If we insert any edge then edge crossing 3 times and the graph will become 3-planar graph. Since we know $\geq 5$ edges occur multi-configuration hence with 5 vertices and 5 edges (inner face or outer face) is a complete configuration which is look like star. \Cref{fig:starmulti}(a) shows the complete configuration.
+\end{proof}
+
+If configuration has $n$ vertex , there will have at most $\frac{n}{2}$ times crossing points.
+We know that muli-configuration occur for $\geq 5$ edges. When edges is $ \textless 5$ then there will at most 2 crossing points. For 5 edges there are 2 crossing nodes and 1 edges and this is the complete configuration. For $n$ vertex , configuration will have at most $\frac{n}{2}$ times crossing points. We work on bar 2-visibility representation of 2-planar graph with at most 5 edges hence a 2-planar configuration will complete configuration with 5 crossing edges.
+
+
+
+
+
+\begin{lemma}
+
+Let $E(G)$ be a maximal 2-planar embedding. Then represent the graph into an ideal form. 
+
+\end{lemma}
+
+\cite{alam} given a theorem  of \emph{Normal Form} for 1-planar graph. We follow this theorem and generate a new theorem which is known as Ideal Form of 2-planar Graph which is given below
+
+
+\begin{theorem}
+The ideal form of 2-planar graph is, if outer face have any crossing, we will insert an extra edge which will multi-edge. It will not cause any crossing and will remove later. And in 2-planar graphs inner face may have more than one configuration. If inner face have two configuration, we will insert an extra edge which will multi-edge between two configuration.
+\end{theorem}
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{100mm}{!}{\input{figures/component.pdf_tex}}
+
+\label{fig:component}
+\end{figure}
+
+
+
+
+Suppose that G is 2-connected with an embedding $E(G)$ with maximal 2-planar components in ideal form. For every separation pair $(u,v)$ there is a sequence  $C_1.... C_{n}$( Fig\ref{fig:component}) in clockwise order at $u$. To separate the components at a separation pair $(u,v)$ even further we allow multi-edges and introduce copy edges $e_1$ to $e_n$ as separation edges. The separation edge $e$ separates all components. The outermost separation edge $e$ encloses all components and the multi-edges from the outer face. This situation is depicted in Fig\ref{fig:component}, where $(u , v)$ is separation pair, the copies of the edge $e$ drawn dotted.
+
+\section{Conclusion}
+In this chapter, we have described important algorithm on visibility representation of planar graphs. The approach of this algorithm are very often followed by the researchers in this field. We have mentioned
+about 2-planar graph and represents its configurations into different part. Finally we generate an ideal form theorem.
+
+
+
+
+\endinput

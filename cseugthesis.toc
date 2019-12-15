@@ -1,0 +1,58 @@
+\contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {CANDIDATES' DECLARATION}}}}{i}{DTLrowi.2.1}% 
+\contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {CERTIFICATION}}}}{ii}{DTLrowi.4.3}% 
+\contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {ACKNOWLEDGEMENT}}}}{iii}{DTLrowi.6.1}% 
+\contentsline {chapter}{List of Figures}{vi}{section*.3}% 
+\contentsline {chapter}{List of Tables}{viii}{section*.4}% 
+\contentsline {chapter}{List of Algorithms}{ix}{section*.4}% 
+\contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {ABSTRACT}}}}{x}{chapter*.5}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Bar Visibility Representations}{3}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Bar 1-Visibility Representations}{3}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Bar 2-Visibility Representations}{5}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Applications of bar 2-Visibility Representations of 2-Planar Graphs}{5}{section.1.4}% 
+\contentsline {section}{\numberline {1.5}Previous Results}{6}{section.1.5}% 
+\contentsline {section}{\numberline {1.6}Scope of this Thesis}{6}{section.1.6}% 
+\contentsline {section}{\numberline {1.7}Thesis Organization}{7}{section.1.7}% 
+\contentsline {chapter}{\numberline {2}Preliminaries}{8}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Basic Terminology}{8}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Graphs}{8}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Simple Graphs and Multigraphs}{8}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Directed and Undirected Graphs}{9}{subsection.2.1.3}% 
+\contentsline {subsection}{\numberline {2.1.4}Subgraphs}{9}{subsection.2.1.4}% 
+\contentsline {subsection}{\numberline {2.1.5}Connected Graph}{10}{subsection.2.1.5}% 
+\contentsline {section}{\numberline {2.2}Special Classes of Graphs}{10}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Planar Graphs and Plane Graphs}{10}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Dual Graph}{11}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}1-Planar Graph}{11}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.4}2-Planar Graphs}{12}{subsection.2.2.4}% 
+\contentsline {subsection}{\numberline {2.2.5}Bar k-Visibility Graphs}{12}{subsection.2.2.5}% 
+\contentsline {section}{\numberline {2.3}Numbering}{13}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}st-Numbering}{13}{subsection.2.3.1}% 
+\contentsline {section}{\numberline {2.4}Drawing Conventions of Planar Graphs}{13}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Planar Drawings}{14}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Straight-line Drawings}{14}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Grid Drawings}{14}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.4}Visibility Drawings}{15}{subsection.2.4.4}% 
+\contentsline {section}{\numberline {2.5}Drawing Conventions of Non-Planar Graphs}{15}{section.2.5}% 
+\contentsline {subsection}{\numberline {2.5.1}1-Planar Drawing}{16}{subsection.2.5.1}% 
+\contentsline {subsection}{\numberline {2.5.2}2-Planar Drawing}{16}{subsection.2.5.2}% 
+\contentsline {section}{\numberline {2.6}Complexity of Algorithms}{16}{section.2.6}% 
+\contentsline {chapter}{\numberline {3}Visibility Representations \& 2-Planar Graphs}{17}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Introduction}{17}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Visibility Representations of Planar Graphs}{17}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Visibility Representations of 1-Planar Graphs}{18}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}2-Planar Graphs}{19}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Configurations of 2-Planar Graphs}{20}{subsection.3.4.1}% 
+\contentsline {subsubsection}{Simple Configuration}{21}{section*.28}% 
+\contentsline {subsubsection}{Multi-Configuration}{21}{section*.32}% 
+\contentsline {section}{\numberline {3.5}Conclusion}{24}{section.3.5}% 
+\contentsline {chapter}{\numberline {4}Bar 2-Visibility Representations of 2-Planar Graphs}{25}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{25}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Numbering of non-planar graph}{25}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}2-Visibility Representations of 2-Planar Graphs}{26}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}2-planar Graph to Planar Graph}{27}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Visibility Representation To Bar 2-Visibility Representation}{29}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Face $f$ in visibility representations}{32}{subsection.4.3.3}% 
+\contentsline {section}{\numberline {4.4}Conclusion}{35}{section.4.4}% 
+\contentsline {chapter}{\numberline {5}Conclusion}{40}{chapter.5}% 
+\contentsline {chapter}{References}{41}{chapter.5}% 

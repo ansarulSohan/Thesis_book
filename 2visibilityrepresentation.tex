@@ -1,0 +1,418 @@
+\chapter{Bar 2-Visibility Representations of 2-Planar Graphs}\label{2visibility}
+
+
+\section{Introduction}
+
+In \Cref{sec:2pg} we define about 2-planar graphs. In this chapter we show how to transform a 2-planar graphs into bar 2-visibility representations.
+
+
+\section{Numbering of non-planar graph}
+\label{stnnpg}
+we know st-numbering is apply on planar graph\cite{{Alempel}}. There is no algorithm or rules of st-numbering on non-planar graph. We develop a theorem\ref{stnp} and an algorithm\ref{stn} for st-numbering on non-planar graph.
+\\
+
+In \Cref{fig:stnum}(a) we draw a 2-planar graph which has no number. To represent this graph into st-numbering, we insert temporary vertex at every crossing point on the 2-planar graph. IN \Cref{fig:stnum}(b), we insert temporary vertex in all crossing points. After that, we delete the temporary vertex so that the graph becomes 2-planar to planar graph. \Cref{fig:stnum}(c) is now planar graph. Now we apply the rule of st-numbering and insert number to the graph \Cref{fig:stnum}(d). Finally all the crossing points that had been deleted by temporary vertex(\Cref{fig:stnum}(b)) will reinserted \Cref{fig:stnum}(e).
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/stnum.pdf_tex}}
+\caption{(a)2-planar Graph; (b)Insert vertex on crossing point in the 2-planar graph; (c)Planar Graph $G$; (d)st-numbering on planar graph $G$; (e)2-planar graph with st-numbering. }
+\label{fig:stnum}
+\end{figure}
+
+We develop the following theorem.
+\begin{theorem}
+\label{stnp}
+There is a linear time algorithm to represent the non-planar graph into st-numbering.
+\end{theorem}
+
+\begin{algorithm}[H] 
+\caption{st-numbering on Non-Planar Graph}
+\label{stn}
+\begin{algorithmic}[1]
+\STATE Insert temporary vertex in all the crossing points in the graph.
+\STATE Delete the temporary vertex so that the graph will convert into planar graph.
+\STATE Insert st-Numbering to the simple graph.
+\STATE Re-insert all the crossing point to the graph.
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+\section{2-Visibility Representations of 2-Planar Graphs}
+
+In this section we show that every 2-planar graph $G$ has a bar 2-visibility representation. The result is obtained by the BAR 2-VISIBILITY algorithm, whose input is a 2-connected embedding 2-planar graph $E(G)$ as a witness for 2-planarity. After convert 2-connected embedding 2-planar graph $E(G)$ into maximal  2-connected 2-planar graph $E(G)$ augmentation then we use st-Numbering of Non-planar Graph[\ref{stnnpg}] algorithm so that we can insert number into vertices. We cannot directly convert the 2-planar graphs into bar 2-visibility representations. We follow the following steps.
+
+
+\subsection{2-planar Graph to Planar Graph}
+\label{2pgtpg}
+\begin{enumerate}
+
+
+
+\item Every 2-planar with 2 edges configuration can direct transform into planar by removing the crossing point. If we remove the crossing point from 2-planar with 2 edges configuration, configuration will become Planar \Cref{fig:2planar2edges}.
+
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{50mm}{!}{\input{figures/2planar2edges.pdf_tex}}
+\caption{2-planar with 2 edges transformation.}
+\label{fig:2planar2edges}
+\end{figure}
+
+\item 
+In 2-planar with 3 edges configuration, the edge pair that contains largest number of vertex by st-numbering will removed for transforming the 2-planar configuration to 1-planar configuration.\Cref{fig:2planar3edges}
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2planar3edges.pdf_tex}}
+\caption{2-planar with 3 edges transformation.}
+\label{fig:2planar3edges}
+\end{figure}
+
+
+\item In 2-planar with 4 edges configuration, the crossing point that contains highest two largest number of vertex by st-numbering will removed for transforming the 2-planar configuration to 1-planar configuration.\Cref{fig:2planar4edges}
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2planar4edges.pdf_tex}}
+\caption{2-planar with 4 edges transformation.}
+\label{fig:2planar4edges}
+\end{figure}
+
+
+\item 
+In Multi-configuration, the crossing point that contains highest two largest number of vertices by st-numbering will be removed until the configuration transform into single configurations.\Cref{fig:multistar}
+
+In \Cref{fig:multistar}(a) the 1st two largest vertex number is $5$ and $4$. so we remove the crossing ponit of  vertex   $5$ and $4$. Edge $5-3$ is crossing with edge $4-2$ and $4-1$. Between edge pair $4-2$ and $4-1$ vertex 2 is greater than 1, So edge $4-2$ will remove with edge $5-3$ as crossing point. After removing the 2-planar crossing point $5-3$ \& $4-2$ , \Cref{fig:multistar}(b) becomes  single configuration.  Edge $1-4$ will deleted between edge $1-4$ \& $1-3$ since vertex $4$ is higher than vertex $3$. In \Cref{fig:multistar}(c), Now the configuration becomes 1-planar x-configuration.  
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/multistar.pdf_tex}}
+\caption{Multiconfiguartion Transformation. (a) Multiconfiguration ; (b)Single-Configuration ; (c)x-configuration ; (d) A face}
+\label{fig:multistar}
+\end{figure}
+
+
+\end{enumerate}
+
+\begin{lemma}
+\label{231}
+If the configuration is simple configuration and the configuration is not 2-planar with 3 edges, Temporary delete the crossing point which is consist of 1st two highest number of vertices and if the configuration is 2-planar with 3 edges, The highest vertex number of edges will be temporary deleted from the  configuration so that configuration becomes 1-planar configuration.
+\end{lemma}
+
+
+
+\begin{lemma}
+\label{2m1}
+If first two highest number of vertex are connected multiple times with eachother, we will select the edge that has highest number of vertex between two vertex for temporary deleting the crossing points.
+\end{lemma}
+
+By lemma[\ref{231},\ref{2m1}] we can transform the embedding 2-planar graphs $E(G)$ into embedding 1-planar graphs $E(G{^\prime})$. When the 2-planar graphs transform into 1-planar graphs , 1-planar graph will have 1-planar configuration. After transform the embedding 2-planar graph $E(G)$ to 1-planar graph $E(G{^\prime})$, we will convert the 1-planar graph $E(G{^\prime})$ to planar graph $E(G{^\prime}{^\prime})$
+
+
+\begin{lemma}
+\label{1pcp}
+If a graph has crossing point of 1-planar configuration, we'll delete the 1-planar crossing point.
+\end{lemma}
+
+In \Cref{fig:multistar}(c) has 1-planar crossing point which is X-configuration. We remove the 1-planar crossing point. \Cref{fig:multistar}(d) shows a face $f$ after deleting 1-planar crossing point.
+
+
+Now the graph becomes a simple planar graph $E(G{^\prime}{^\prime})$. 
+
+
+
+\subsection{Visibility Representation To Bar 2-Visibility Representation}
+We convert the 2-planar graphs to planar graphs. Using Tammassia and Tollis \cite{R} visibility representation algorithm, we transform the planar graph to visibility representations of planar graphs. Then we will re-insert the 1-planar crossing point by the algorithm of 1-planar crossing point insertion\ref{stn} for representing the graph to bar 1-visibility representation.
+
+
+
+\begin{algorithm}[H] 
+\caption{1-planar crossing point insertion}
+\label{1cpca}
+
+\begin{algorithmic}[1]
+\STATE if face is a left-wing,then\\
+{At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40.
+then  we'll insert the 2nd largest node number edge segment  by expanding the vertex segment length 0.60.}
+\STATE 
+if face is a Right-wing, 
+then\\
+{At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40.
+then  we'll insert the 2nd largest node number edge segment  by expanding the vertex segment length 0.60.}
+\STATE 
+if face is a diamond, then
+ \\
+{ At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40.
+then  we'll insert the 2nd largest node number edge segment  by expanding both edge pair vertex segment length 0.60 from that side we insert previous edge-segment.}
+\end{algorithmic}
+\end{algorithm}
+
+After converting planar visibility representation to bar 1-visibility representation, we will re-insert all the deleted 2-planar crossing edge and 2-planar crossing point for representing the bar 1-visibility representation to bar 2-visibility representation by the algorithm of 2-planar crossing insertion\ref{2pcpi}. 
+
+
+
+\begin{algorithm}
+\caption{2-planar crossing edge insertion}
+\label{2pcei}
+\begin{algorithmic}[1]
+
+\STATE if the deleted crossing edge is from that vertex which has another crossing edge then\\
+The edge segment will inserting by expanding the vertex length 0.20.
+\STATE else \\
+The edge segment will inserting by expanding the vertex length 0.60.
+
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+\caption{2-planar crossing point insertion}
+\label{2pcpi}
+\begin{algorithmic}[1]
+
+\STATE if face is a left-wing then,\\
+
+largest node number  egde will inserted by expanding the vertex segment  0.60 or 0.80
+another edge will inserted between grid 0.20 to 0.80  by expanding the vertex segment.
+\STATE if face is a right-wing then,\\
+
+largest node number egde will inserted by expanding the vertex segment  0.60 or 0.80
+another edge will inserted between grid 0.20 to 0.80 by expanding the vertex segment where expansion priority is 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
+\STATE if face is a diamond then,\\
+largest node number edge will inserted in the grid by expanding the vertex segment between 0.60 to 0.80 (expansion priority 0.60\textgreater 0.80)
+another edge will inserted in the grid by expanding the vertex segment between 0.20 to 0.80  (expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80)
+
+\STATE If there is any crossing point remain insert the crossing edge pair of crossing point by the algorithm of \emph{n-crossing point insertion}
+
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{algorithm}
+\caption{n-crossing point insertion}
+\label{ncpi}
+\begin{algorithmic}[1]
+
+\STATE Largest node number edge will inserted in the grid by expanding the vertex segment 0.20 to 0.80  where  expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
+\\
+\STATE Another edge will inserted in the grid by expanding the vertex segment 0.20 to 0.80  where  expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
+\end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{algorithm}[H] 
+\caption{{2-Planar Crossing Insertion}.}
+\label{2pcpi}
+\begin{algorithmic}[1]
+
+\STATE if there is crossing edge for insertion then insert the edge segment by \emph{2-planar crossing insertion} and go to next step, and if there is no crossing edge insertion then go to next step.
+
+\STATE If there is no crossing point then stop. If there is crossing point then insert the crossing edge pair of the crossing point by \emph{ 2-planar crossing point insertion} algorithm.
+
+
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+\Cref{fig:2planar2edgesvisi} is the Visibility Representations of 2-Planar with 2 Edges Configuration. In {fig:2planar2edgesvisi}(a), edge pair (2,4) and (1,5) crossing with eachother atmost 2 times. {fig:2planar2edgesvisi}(b) is the visibility representatios of {fig:2planar2edgesvisi}(a) where edge segment of (1,5) is crossed by 2 vertex segment.
+
+\begin{figure}[!tb]
+\centering
+\resizebox{70mm}{!}{\input{figures/2planar2edgesvisi.pdf_tex}}
+\caption{Visibility Representations of 2-Planar with 2 Edges Configuration.}
+\label{fig:2planar2edgesvisi}
+\end{figure}
+
+
+
+\label{2p3ev}
+
+\Cref{fig:2planar3edgesvisi} is the Visibility Representations of 2-Planar with 3 Edges Configuration.  {fig:2planar2edgesvisi}(b), is the visibility representations of {fig:2planar2edgesvisi}(a).In {fig:2planar2edgesvisi}(a), every vertex has single crossing edge,so in visibility representation of {fig:2planar2edgesvisi}(a) the crossing edge pair will inserted by expand the vertex length 0.60 which is shown in {fig:2planar2edgesvisi}(b). In \Cref{fig:2planar3edgesvisi}(a) crossing edge (3,6) is crossed by 2 edges and in \Cref{fig:2planar3edgesvisi}(b), edge segment (3,6) is crossed by two vertex.  In the other side, \Cref{fig:2planar3edgesvisi}(c) and \Cref{fig:2planar3edgesvisi}(e) are type because in \Cref{fig:2planar3edgesvisi}(c) vertex no. 2 has two crossing edge pair and in \Cref{fig:2planar3edgesvisi}(e), vertex no. 1 has two crossing edge pair. So the deleted crossing edge will inserted by expand the vertex segment 0.20. \Cref{fig:2planar3edgesvisi}(d) is the visibility representation of \Cref{fig:2planar3edgesvisi}(c) and \Cref{fig:2planar3edgesvisi}(f) is the visibility representation of \Cref{fig:2planar3edgesvisi}(e).
+
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2planar3edgesvisi.pdf_tex}}
+\caption{Visibility Representations of 2-Planar with 3 Edges Configuration.}
+\label{fig:2planar3edgesvisi}
+\end{figure}
+
+
+
+\Cref{fig:2planar4edgesvisi} shows the visibility representations of 2-planar with 4 edges configuration. \Cref{fig:2planar4edgesvisi}(f) is the visibility representation of \Cref{fig:2planar4edgesvisi}(a).
+\begin{figure}[!tb]
+\centering
+\resizebox{100mm}{!}{\input{figures/2planar4edgesvisi.pdf_tex}}
+\caption{Visibility Representations of 2-Planar with 4 Edges Configuration.}
+\label{fig:2planar4edgesvisi}
+\end{figure}
+
+
+
+
+
+
+
+
+
+In \Cref{fig:starvisi}
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/starvisi.pdf_tex}}
+\caption{Visibility Representations of Multi-Configuration.}
+\label{fig:starvisi}
+\end{figure}
+
+
+
+
+
+\subsection{Face $f$ in visibility representations}
+
+Face $f$ changing depends on st-Numbering. Face can be 3 types: left wing, right wing and diamond.
+\\
+In left wing \Cref{fig:starvisi} the vertex  expand from left side of the face. Similarly we can draw for right wing where vertex expand from right side in the face \Cref{fig:rightwing}. In Diamond, vertex-segments length expand from both left and right side \Cref{fig:diamondstep}.
+\\
+For face , At fist we apply 1-Planar crossing point insertion\ref{1pcpa} algorithm.  At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40. And then  we'll insert the 2nd largest node number edge segment  by expanding the vertex segment length 0.60. Then  we apply 2-Planar Crossing Insertion \ref{2pcpi} algorithm.
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/rightwing.pdf_tex}}
+\caption{Right-wing.}
+\label{fig:rightwing}
+\end{figure}
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/diamondstep.pdf_tex}}
+\caption{Diamond.}
+\label{fig:diamondstep}
+\end{figure}
+
+
+
+
+
+
+
+
+\begin{lemma}
+If a face $f = (1,2,3,4,5)$ is drawn by visibility representation, then at first \emph{1-planar crossing point insertion} adds the pair of crossing edges $(2, 5)$ and $(1, 3)$ and then {2-Planar Crossing Insertion} adds the crossing edges $(1, 4)$ and finally again {2-Planar Crossing Insertion} adds the pair of crossing edges $(5, 3)$ and $(4, 2)$ inside
+$f$ with exactly two vertex-edge segment crossing.
+\end{lemma}
+
+\begin{proof}
+Figure\Cref{fig:starvisi} shows the left wing because all vertex are expanding from left side in the face for the configuration. \emph{1-planar crossing point insertion} adds the pair of crossing edges $(2, 5)$ and $(1, 3)$ where edge $(2, 5)$ insert by expanding vertex-segment 0.40 in the grid and edge $(1, 3)$ insert by expanding vertex-segment 0.60 in the grid. \emph{2-Planar Crossing Insertion} adds the crossing edge $(1, 4)$ where edge $(1, 4)$ insert by expanding vertex-segment 0.20 in the grid. Finally we again use \emph{2-Planar Crossing Insertion} algorithm which adds the pair of crossing edges $(5, 3)$ and $(2, 4)$ where edge $(5, 3)$ insert by expanding vertex-segment 0.60 in the grid and edge $(2, 4)$ insert by expanding vertex-segment 0.80 in the grid. Edge (1, 4) and (2, 5) is crossing two vertex-segment. Now it becomes bar 2-visibility representation.
+\end{proof}
+
+We can now establish our main result.
+\begin{theorem}
+There is a linear time algorithm to construct a Bar 2-Visibility Representation of 2-Planar Graphs.
+\end{theorem}
+\begin{proof}
+First take a embedding 2-connected 2-planar graph. Convert the 2-planar graph into maximal graph. Then we apply the st-Numbering of Non-Planar Graph algorithm. Using separation edge, we decompose the graph. Then we convert the 2-planar graph into 1-planar graph and 1-planar graph to planar graph. By Visibility Representation algorithm we represents the planar graph into visibility. By the algorithm of 1-planar crossing point insertion we represents the visibility representation to bar 1-visibility representation and using the algorithm of 2-planar crossing insertion we represents the bar 1-visibility representation to bar 2-visibility representation. Finally we delete all extra and separation edges and represents the whole process into the algorithm of Bar 2-Visibility.
+\end{proof}
+
+\begin{algorithm}[H] 
+input : {A 2-planar embedding $E(G)$ of a 2-connected 2-planar graph $G$. } \\
+output : {A bar 2-visibility representation $T$ on a grid.}
+\caption{Bar 2-Visibility.}
+\label{b2vr}
+\begin{algorithmic}[1] 
+\STATE Augment $E(G)$ to a maximal 2-connected 2-planar embedding and update $G$.
+\STATE Decompose $G$ into components.
+
+\STATE foreach separating pair ${u, v}$ do
+\STATE In $E(G)$, add a copy of $(u, v)$ as a separating edge to the right of each
+ component at u and update G.
+
+\STATE Transform $E(G)$ into ideal form.
+
+\STATE Remove 2-planar crossing of $E(G)$. Let $E(G{^\prime})$ be the remaining 1-planar embedding of the spanning 1-planar subgraph $G{^\prime}$ of $G$.
+
+\STATE Remove 1-planar crossing point of $E(G{^\prime})$. Let $E(G{^\prime}{^\prime})$ be the remaining planar embedding of the spanning planar subgraph $G{^\prime}{^\prime}$ of $G{^\prime}$. Assign each pair of crossing edges to the face of $E(G{^\prime}{^\prime})$ from which it was extracted.
+
+
+\STATE Construct a planar visibility representation $T$ of $G{^\prime}{^\prime}$ by
+\emph{Visibility Representation}.
+
+
+\STATE Re-insert 1-planar crossing point and represent visibility representations to bar 1-visibility representation.
+
+
+
+\STATE Re-insert 2-planar crossing and represent bar 1-visibility representations to bar 2-visibility representation.
+
+
+\STATE Remove all the extra edges from $T$ that were added.
+\STATE Return $T$.
+
+
+\end{algorithmic}
+\end{algorithm}
+
+
+\Cref{fig:2p2v},\Cref{fig:2p2v1},\Cref{fig:2p2v11},\Cref{fig:2p2v2} shows the total steps of Bar 2-Visibility Representations of 2-Planar Graphs. \Cref{fig:2p2v}(a) is the embedding 2-connected 2-planar graph $E(G)$. In \Cref{fig:2p2v}(b) we augment the embedding 2-connected 2-planar graph to maximal 2-connected 2-planar graph $E(G)$. \Cref{fig:2p2v}(c)(d)(e)(f) is the steps of st-numbering of non-planar graph so that we can represent our input graph into st-numbering for bar 2-visibility representation. \Cref{fig:2p2v1}(a) is the ideal form of $E(G)$ where we separate each components by dotted separation edges which is multi-edge. We transform $E(G)$ to $E(G{^\prime})$ in \Cref{fig:2p2v1}(b) and \Cref{fig:2p2v11}(a). Then we transform $E(G{^\prime})$ to $E(G{^\prime}{^\prime})$ in \Cref{fig:2p2v11}(b).  \Cref{fig:2p2v2}(a) is the planar visibility representation of  \Cref{fig:2p2v11}(b). \Cref{fig:2p2v2}(b) is the bar 1-visibility representation of $E(G{^\prime})$ (\Cref{fig:2p2v11}(a)). \Cref{fig:2p2v2}(c) is the bar 2-visibility representation of maximal embedding 2-planar graph \Cref{fig:2p2v1}(a). Finally  \Cref{fig:2p2v2}(d) is the exact bar 2-visibility representation of out input graph.
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2p2v.pdf_tex}}
+\caption{Bar 2-Visibility Representations of 2-Planar Graphs(part 1).}
+\label{fig:2p2v}
+\end{figure}
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2p2v1.pdf_tex}}
+\caption{Bar 2-Visibility Representations of 2-Planar Graphs(part 2).}
+\label{fig:2p2v1}
+\end{figure}
+
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2p2v11.pdf_tex}}
+\caption{Bar 2-Visibility Representations of 2-Planar Graphs(part 3).}
+\label{fig:2p2v11}
+\end{figure}
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2p2v2.pdf_tex}}
+\caption{Bar 2-Visibility Representations of 2-Planar Graphs(part 4).}
+\label{fig:2p2v2}
+\end{figure}
+
+
+
+
+\section{Conclusion}
+In this chapter, we reviewe important algorithm on constrained bar 2-visibility representation of 2-planar graphs. We have shown that every 2-planar graph is bar 2-visibility representation.
+
+
+
+
+
+
+\endinput

@@ -1,0 +1,126 @@
+\chapter{Introduction}\label{intro}
+
+
+A graph is a diagram showing the relation between variable quantities, typically of two variables, each measured along one of a pair of axes at right angles. Graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects from a certain collection.There are thousands of real world problems each of which underlying structure consisting of entities and their relationships, and the representation of these problems as a suitable graph classification can aid in powerful visualization of the concept. Structures that can be represented as graphs are ubiquitous, and many problems of practical interest can be represented by graphs. Graphs can be used to model many types of relations and processes in physical, biological, social and information systems. Many practical problems can be represented by graphs. Emphasizing their application to real-world systems, the term network is sometimes defined to mean a graph in which attributes (e.g. names) are associated with the vertices and edges, and the subject that expresses and understands the real-world systems as a network is called network science.The study of graph theory has its widespread applications in a vast majority of fields ranging from computer network analysis, genetics, bioinformatics, transportation network, social networking concepts to VLSI circuit design, cartography, molecular chemistry and condensed matter physics.
+\\
+
+
+The first paper in the history of graph theory was written by Leonhard Euler \cite{Biggs} on the Seven Bridges of Konigsberg and published in 1736 and the first textbook on graph theory was written by Denes  Konig \cite{Tutte} that was published in 1936.\\
+
+
+In mathematics, a graph is a collection of points, called vertices, and lines between those points, called edges.Typically,a graph is depicted in diagrammatic form as a set of dots for the vertices,joined by lines or curves for the edges.Graph drawing is a drawing of a graph that is basically a illustrated representation of an embedding of the graph in the plane, usually aimed at a convenient visualization of certain properties of the graph in question or of the object modeled by the graph. A graph structure can be extended by assigning a weight to each edge of the graph.Graphs with weights, or weighted graphs, are used to represent structures in which pairwise connections have some numerical values. Besides the weighted graphs, colored graphs can also be used to focus on certain special attributes of a problem.
+\\
+
+
+Visibility in the plane is a very natural concept but many fundamental problems remain unsolved.Visibility graphs are a much studied approach to these problems. A visibility graph is a graph of intervisible locations, typically for a set of points and obstacles in the Euclidean plane. Each node in the graph represents a point location and each edge represents a visible connection between them.Bar visibility graphs are one of the best understood classes of visibility graphs. In Bar visibility graphs, the vertices correspond to horizontal line segments called bars and visibility runs vertically along lines of sight which connect two bars while being disjoint from all others. These graphs have been completely characterized by Tamassia and Tollis \cite{R}.
+\\
+
+
+There is another generalization of a bar visibility graph that has been been introduced by Dean, Evans, Gethner, Laison, Safari and Trotter \cite{M} in $2005$. Their idea is that lines of sight are allowed to intersect at most $k$ other bars, where the values of $k = 0,1,2,3,\ldots n$. For the case $k = 0$, a graph is called \emph{visibility graph}. A graph is called \emph{Bar 1-visibility graph} for $k = 1$. Similarly for the case $k = 2$, a graph is called \emph{Bar 2-visibility graph}.
+\\
+
+
+In this thesis, we have focused the visibility representation of 2-planar graphs which is a non-planar fraph. A visibility representation of a plane graph G is a drawing of G, where the vertices of G are represented by non-overlapping horizontal segments (called vertex segments), and each edge of G is represented by a vertical line segment touching the vertex segments of its end vertices. Tamassia \& Tollis \cite{R} have given a linear time algorithm for constructing a visibility representation of a planar graph. In a bar k-visibility representation of a graph a horizontal line corresponding to a vertex and the vertical line segment corresponding to an edge intersects at most $k$ bars which are not end points of the edge. Thus a visibility representation is a bar k-visibility representation for k = 0. Fleshner and Massow have investigated some graph theoretic properties of  1-visibility graphs \cite{S}. 
+Recently Franz J. Brandenburg \cite{FJ} have developed an algorithm for \emph{1-Visibility Representations of 1-Planar Graphs}.A 1-visibility representation of a graph displays each vertex as a horizontal vertex-segment, called a bar, and each edge as a vertical edge segment between the segments of the vertices, such that each edge-segment crosses at most one vertex-segment and each vertex-segment is crossed by at most one edge-segment. A graph is 1-visible if it has such a representation. 1-visibility is related to 1-planarity where graphs are drawn such that each edge is crossed at most once, and specializes bar 1-visibility where vertex-segments can be crossed many times.He develop a linear time algorithm to compute a 1-visibility representation of an embedded 1-planar graph in $O(n^{2})$ area. Hence, every 1-planar graph is 1-visible. Concerning density, both 1-visible and 1-planar graphs of size $n$ have at most $4n-8$ edges. For every $n \geq 7$ there are 1-visible graphs with 4n-8 edges, which are not 1-planar.
+\\
+A bar 1-visibility representation of a graph displays each vertex as a horizontal vertex-segment, called a bar, and each edge as a vertical edge segment between the segments of the vertices, such that each edge-segment crosses at most one vertex-segment and  vertex-segment is crossed by many edge-segment.
+
+However, there is no algorithm for finding \emph{Bar 2-Visibility Representations of 2-Planar Graphs}. So, In this thesis, we study Visibility Representations,bar 1-Visibility Representations of 1-Planar Graphs. It is easy to see that all Bar Visibility Representations are planar and all Bar 1-visibility Representations are 1-planar.In this thesis, we give a linear time algorithm for finding a \emph{ Bar 2-Visibility Representation of 2-Planar Graphs}.We will give the details of the above mentioned algorithm and some of the previous results in this field that have a significant impact on our work.In this chapter, we give some introductory concepts of visibility representation, 1-Visibility Representations and 2-Visibility Representations that will help realizing the concepts presented here. Also, we have presented some applications of this topic in various fields. The rest of this chapter is formed as follows. In section \ref{sec:bbr}, we define Visibility Representation of Planar Graphs and in section \ref{sec:b1}, we define 1-Visibility Representations of 1-Planar Graphs and  in section \ref{sec:b2}, we define bar 2-Visibility Representations of 2-Planar Graphs which is the central idea of this thesis. Section \ref{sec:application} is applications of visibility representations. In section \ref{sec:results}, we present a brief history of visibility representation,bar 1-visibility representation, 2-Planar Graphs and on the basis of that, in section \ref{sec:scope}, we depict the scope and objective of this thesis. In section  \ref{sec:thesis}, we present the organization of this thesis.
+
+
+
+
+
+
+
+
+
+\section{Bar Visibility Representations}
+\label{sec:bbr}
+In Bar Visibility Representation \cite{R} the vertices correspond to horizontal line segments, called bars and the edges correspond to vertical lines line segments, called bars.
+In the \Cref{fig:v} (a) is a planar graph G, and (b) is the bar visibility representation of G, if there exists a one-to-one correspondence between vertices of G and bars in (b) , such that there is an edge between two vertices in G if and only if there exists an unobstructed vertical line of sight between their corresponding bars. 
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{150mm}{!}{\input{figures/v.pdf_tex}}
+\caption{(a) A planar graph ;(b) The visibility representation of the graph $G$.}
+\label{fig:v}
+\end{figure}
+
+
+
+\section{Bar 1-Visibility Representations}
+\label{sec:b1}
+
+
+In bar 1 Visibility Representation , each edge-segment crosses at most one vertex-segment and each vertex-segment is crossed by many edge-segment.
+ \Cref{fig:1v}, is showing 1-planar graph and its 1-visibility representations,where Dot edges are representing the 1-planar crossing points and dot vertices represents the vertex-expansion for representing 1-visibility representations. 
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{150mm}{!}{\input{figures/1v.pdf_tex}}
+\caption{(a) 1-planar graph ; (b) 1-visibility representations of the 1-planar graph.}
+\label{fig:1v}
+\end{figure}
+
+In 1 Visibility Representation \cite{FJ}, each edge-segment crosses at most one vertex-segment and each vertex-segment is crossed by at most one edge-segment and graphs are drawn such that each edge is crossed at most once, and specializes bar 1-visibility where vertex-segments can be crossed many times vertex-segments can be crossed many times.
+
+
+
+\section{Bar 2-Visibility Representations}
+\label{sec:b2}
+In Bar 2-Visibility Representations, each edge-segment is crossed at most twice, and  vertex-segments can be crossed many times. \Cref{fig:2v}, is showing 2-planar graph and its 2-visibility representations,where Dot edges are representing the crossing points and dot vertices represents the vertex-expansion for representing bar 2-visibility representations.
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/2v.pdf_tex}}
+\caption{(a) A 2-planar graph ; (b) The bar 2-visibility representations of the 2-planar graph.}
+\label{fig:2v}
+\end{figure}
+
+
+
+
+
+\section{Applications of bar 2-Visibility Representations of 2-Planar Graphs}
+\label{sec:application}
+
+The problem of computing a compact bar 2-Visibility Representations of 2-Planar Graphs is important not only in algorithmic graph theory, but also in practical applications such as VLSI layout (Circuit board layout) \cite{G} and Modules and their interconnections of a VLSI circuit are given as a graph where vertices of the graph represents a module of the VLSI circuit and edges represents an interconnection between two modules. From a visibility representation, a planar polyline drawing can be generated with O(1) bends per edge in linear time \cite{Nishizeki}. Bar 2-Visibility representations can also be used to generate 2-planar orthogonal drawings.It is also used for security systems.
+
+
+
+
+\section{Previous Results}
+\label{sec:results}
+In this section, we give an outline of the results found in this area. Visibility representation has practical applications in VLSI layout \cite{G} and several researchers concentrated their attention on visibility representations. Otten and Van Wijk \cite{Otten} shows that every planar graph admits a visibility representation and Tamassia \& Tollis \cite{R} develop a linear-time algorithm for Visibility Representation of a planar graph.Alice M. Dean et al. have introduced a generalization of visibility representation for a non-planar graph which is called bar k-visibility representation \cite{M}.
+\\
+In recent years, several works are devoted to this field. Fabrici and Madaras \cite{madaras} study the existence of subgraphs of bounded degrees in 1-planar graphs which is also called bar 1-visibility graph. It is shown that each 1-planar graph contains a vertex of degree at most 7; they also prove that each 3-connected 1-planar graph contains an edge with both end vertices of degrees at most 20. Sultana, Shaheena and Rahman, Md. Saidur and Roy, Arpita and Tairin, Suraiya \cite{sultana} generated an algorithm for Bar 1-Visibility Drawings of 1-Planar Graphs. Later Franz J. Brandenburg \cite{FJ} have developed algorithm for \emph{1-Visibility Representations of 1-Planar Graphs}.Alam, Brandenburg and Kobourov \cite{alam} described Straight-Line Grid Drawings of 3-Connected 1-Planar Graphs. Michael, Kaufmann, Chrysanthi N. Raftopoulou \cite{michael} describes about Optimal 2- and 3-Planar Graphs.
+
+
+
+
+\section{Scope of this Thesis}
+\label{sec:scope}
+
+In this section, we give an overview of the basic hunch of the approach we have taken for dealing with the problem of bar 2-Visibility Representation of 2-Planar Graph $G$. At the end, we list the results obtained by us in this thesis.\\
+If the input graph is 2-Planar Graph , we'll remove all crossing points from the graph $G$ and convert the graph into Planar graph using a technique based on st-numbering. After that , we'll re-insert all the crossing points and again transform the planar graph into 2-Planar Graph. Then we'll convert the 2-Planar Graph into 1-planar graph and then convert this 1-Planar graph into planar graph. After getting the planar graph, we represents the this planar graph into \emph{Visibility Representation}\cite{R}.Then we re-insert all 1-Planar crossing points for transforming the graph into 1-Visibility Representations and finally we re-insert all 2-Planar crossing points or deleted edges for transforming 1-Visibility Representations into bar 2-Visibility Representations. Finally, our findings in this thesis is listed here.
+
+
+\begin{itemize}
+\item We have developed an algorithm for st-numbering of Non-Planar Graphs .
+\item we have also developed an algorithm for finding 2-Visibility Representations of 2-Planar Graphs.
+
+\end{itemize}
+
+
+
+\section{Thesis Organization}
+\label{sec:thesis}
+The rest of this thesis is organized as follows. In chapter \ref{preliminaries}, we give some basic terminology of graph theory and graph drawing. In chapter \ref{visibility}, we present previous algorithms on Visibility Representations , Visibility Resentations of 1-Planar Graphs and 2-Planar Graphs. In chapter  \ref{2visibility}, we mention previous algorithms on constrained visibility representations and our algorithms on bar 2-Visibility Representations of 2-Planar Graphs . Finally, Chapter  \ref{con} discusses the open problem in this field and gives this thesis an ending.
+
+
+
+
+\endinput

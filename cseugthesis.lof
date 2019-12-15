@@ -1,0 +1,47 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces (a) A planar graph ;(b) The visibility representation of the graph $G$.\relax }}{4}{figure.caption.6}% 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces (a) 1-planar graph ; (b) 1-visibility representations of the 1-planar graph.\relax }}{4}{figure.caption.7}% 
+\contentsline {figure}{\numberline {1.3}{\ignorespaces (a) A 2-planar graph ; (b) The bar 2-visibility representations of the 2-planar graph.\relax }}{5}{figure.caption.8}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A graph $G$ with four vertices and five edges.\relax }}{9}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces $(a)$ A simple graph ; $(b)$ The Multigraph.\relax }}{9}{figure.caption.10}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) A Directed Graph ; (b) A Undirected Graph.\relax }}{9}{figure.caption.11}% 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces (a) A Simple graph $G$ ; (b) and (c) Subgraph $S$ for (a).\relax }}{10}{figure.caption.12}% 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces (a) A Connected Graph ; (b) A Disconnected Graph.\relax }}{10}{figure.caption.13}% 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Three planar embeddings of the same planar graph.\relax }}{11}{figure.caption.14}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Dual graph $G^{*}$ on the planar graph $G$.\relax }}{11}{figure.caption.15}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces 1-Planar Graph.\relax }}{12}{figure.caption.16}% 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) A 2-Planar Graph ; (b) A 2-Planar Graph with Hermits vertices.\relax }}{12}{figure.caption.17}% 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces (a)Simple Graph $G$ ; (b),(c) and (d) st-Numbering.\relax }}{13}{figure.caption.18}% 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces (a) A planar drawing ; (b) A non-planar drawing of the graph drawn in (a) ; (c) A graph which has not planar drawing.\relax }}{14}{figure.caption.19}% 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces A Straight-line Drawing\relax }}{14}{figure.caption.20}% 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces A Grid Drawing.\relax }}{15}{figure.caption.21}% 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces (a) A planar Graph $G$;(b) w-visibility representation; (c)${\epsilon }$-visibility representation; (d) s-visibility representation.\relax }}{16}{figure.caption.22}% 
+\contentsline {figure}{\numberline {2.15}{\ignorespaces 1-planar drawing of a graph.\relax }}{16}{figure.caption.23}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Planar Graph G, its dual $G^{*}$\relax }}{18}{figure.caption.24}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces (a) A dual graph $G^{*}$ ; (b) Visibility representation of graph $G$ ; (c) Graph $G$\relax }}{19}{figure.caption.25}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces (a) A 1-planar graph ; (b) Remove all crossing-points from graph ; (c) Add extra edge according to rule ; (d) st-numbering Planar Graph ; (e) Visibility Representations of the Planar Graph ; (f) Bar 1-Visibility Representations of 1-Planar Graph.\relax }}{20}{figure.caption.26}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces (a) A 2-Planar Graph ; (b) A 2-Planar Graph with Hermits vertices.\relax }}{20}{figure.caption.27}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 2-planar configuration with 2-edges.\relax }}{21}{figure.caption.29}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 2-planar configuration with 3-edges\relax }}{22}{figure.caption.30}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 2-planar configuration with 4-edges\relax }}{22}{figure.caption.31}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Multi-configuration\relax }}{22}{figure.caption.33}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Multi-Configuration to Simple Configuration.\relax }}{23}{figure.caption.34}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces (a)2-planar Graph; (b)Insert vertex on crossing point in the 2-planar graph; (c)Planar Graph $G$; (d)st-numbering on planar graph $G$; (e)2-planar graph with st-numbering. \relax }}{26}{figure.caption.36}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 2-planar with 2 edges transformation.\relax }}{27}{figure.caption.37}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 2-planar with 3 edges transformation.\relax }}{27}{figure.caption.38}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 2-planar with 4 edges transformation.\relax }}{27}{figure.caption.39}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Multiconfiguartion Transformation. (a) Multiconfiguration ; (b)Single-Configuration ; (c)x-configuration ; (d) A face\relax }}{28}{figure.caption.40}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Visibility Representations of 2-Planar with 2 Edges Configuration.\relax }}{30}{figure.caption.41}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Visibility Representations of 2-Planar with 3 Edges Configuration.\relax }}{31}{figure.caption.42}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Visibility Representations of 2-Planar with 4 Edges Configuration.\relax }}{31}{figure.caption.43}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Visibility Representations of Multi-Configuration.\relax }}{32}{figure.caption.44}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Right-wing.\relax }}{33}{figure.caption.45}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Diamond.\relax }}{34}{figure.caption.46}% 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Bar 2-Visibility Representations of 2-Planar Graphs(part 1).\relax }}{36}{figure.caption.47}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Bar 2-Visibility Representations of 2-Planar Graphs(part 2).\relax }}{37}{figure.caption.48}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Bar 2-Visibility Representations of 2-Planar Graphs(part 3).\relax }}{38}{figure.caption.49}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Bar 2-Visibility Representations of 2-Planar Graphs(part 4).\relax }}{39}{figure.caption.50}% 
+\addvspace {10\p@ }

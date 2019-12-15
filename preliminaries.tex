@@ -1,0 +1,329 @@
+\chapter{Preliminaries}
+\label{preliminaries}
+
+
+In this chapter, we define some basic terminology of graph theory, graph
+drawing and algorithm theory, that we will use the rest of this
+thesis.Definitions which are not included in this chapter will be introduced
+as they are needed. We review, in \ref{basic}, some definitions of standard
+graph-theoretical terms. In \ref{special}, we discuss about some special classes
+of graphs that are important for the ideas and concepts used in the later
+parts of this thesis. We devote \ref{number} to define different numbering of planar graph.In \ref{dcpg} and \ref{dcng} we define some
+drawing conventions of planar and non-planar graphs. Finally, we introduce
+the notion of time complexity in \ref{complexity}.
+
+
+
+
+\section{Basic Terminology}
+\label{basic}
+
+In this section we've given some definitions about graph-theoretical terms that we
+use throughout this thesis.
+
+\subsection{Graphs}
+
+Graph is a collection of points, called vertices($V$), and lines between those points, called edges($E$).In \Cref{fig:graph} shows a graph $G = (V, E)$ where each vertex in $ V = {v1, v2, \ldots , v4}$
+is drawn as a small circle and each edge in $E = {e1, e2, \ldots , e5}$ is drawn by
+a line segment. Vertices are connecting to eachother by edges.
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{40mm}{!}{\input{figures/graph.pdf_tex}}
+\caption{A graph $G$ with four vertices and five edges.}
+\label{fig:graph}
+\end{figure}
+
+
+
+
+
+
+
+
+\subsection{Simple Graphs and Multigraphs}
+
+If a graph $G$ has no \emph{multiple edges} or \emph{loops}, then $G$ is said to be a
+simple graph. In \Cref{fig:simple_multi}, (a) is a simple graph.
+\\
+A graph in which loops and multiple edges are allowed is called a Multigraph.It can arise from various applications.\Cref{fig:simple_multi} shows (b) is multigraph. 
+
+
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{100mm}{!}{\input{figures/simple_multi.pdf_tex}}
+\caption{$(a)$ A simple graph ; $(b)$  The Multigraph.}
+\label{fig:simple_multi}
+\end{figure}
+
+
+
+
+
+\subsection{Directed and Undirected Graphs}
+
+A graph in which every edge is directed is called a Directed Graph, and a Graph in which every edge is undirected is called Undirected Graph. \Cref{fig:direct_undirect} (a) represents a Directed Graph using arrow sign and (b) shows Undirected Graph where has no direction sign in the edges.
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{80mm}{!}{\input{figures/direct_undirect.pdf_tex}}
+\caption{(a) A Directed Graph ; (b) A Undirected Graph.}
+\label{fig:direct_undirect}
+\end{figure}
+
+
+
+
+\subsection{Subgraphs}
+A subgraph $S$ of a graph $G$ is a graph whose set of vertices and set of edges are all subsets of $G$. \Cref{fig:subgraph} (b) and (c) shows the subgraph $S$ for the real Simple graph (a).
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{100mm}{!}{\input{figures/subgraph.pdf_tex}}
+\caption{(a) A Simple graph $G$ ; (b) and (c) Subgraph $S$ for (a).}
+\label{fig:subgraph}
+\end{figure}
+
+
+
+
+
+
+
+\subsection{Connected Graph}
+A Graph in which there is a path joining each pair of vertices, the graph being undirected. It is always possible to travel in a connected graph between one vertex and any other; no vertex is isolated. If a graph is not connected it will consist of several components, each of which is connected; such a graph is said to be disconnected.\Cref{fig:connectivity} (a) shows the Connected Graph by dot edge. and (b) shows the graph becomes disconnected when the dot edge is removed.
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{150mm}{!}{\input{figures/connectivity.pdf_tex}}
+\caption{(a) A Connected Graph ; (b) A Disconnected Graph.}
+\label{fig:connectivity}
+\end{figure}
+
+
+
+
+\section{Special Classes of Graphs}
+\label{special}
+
+In this section we have given some definitions of special classes of graphs related
+to planar graphs and non planar graphs (1-Planar Graphs and 2-Planar Graphs) used in the remainder of the thesis.
+
+
+\subsection{Planar Graphs and Plane Graphs}
+
+A planar graph is a graph that can be embedded in the plane. It can be drawn on the plane in such a way that its edges intersect only at their endpoints. In other words, it can be drawn in such a way that no edges cross each other. \Cref{fig:planar} shows multiple planar embeddings of the same planar graphs.
+\\
+
+A plane graph can be defined as a planar graph with a mapping from every node to a point on a plane, and from every edge to a plane curve on that plane, such that the extreme points of each curve are the points mapped from its end nodes, and all curves are disjoint except on their extreme points.
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{150mm}{!}{\input{figures/planar.pdf_tex}}
+\caption{Three planar embeddings of the same planar graph.}
+\label{fig:planar}
+\end{figure}
+
+
+
+\subsection{Dual Graph}
+For a planar graph (or Plane Graph) $G$, we often construct another graph 
+called the Dual Graph $G^{*}$. The dual graph $G^{*}$ of a planar graph $G$ is a graph that has a vertex for each face of $G$. The dual graph has an edge whenever two faces of $G$ are separated from each other by an edge, and a self-loop when the same face appears on both sides of an edge. In \Cref{fig:dual_graph} the dotted graph represents the Dual Graph $G^{*}$ for the Planar Graph $G$ where $a,b,c,d$ and $e$ represents the faces of $G$.
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{70mm}{!}{\input{figures/dual_graph.pdf_tex}}
+\caption{Dual graph $G^{*}$ on the planar graph $G$.}
+\label{fig:dual_graph}
+\end{figure}
+
+
+
+\subsection{1-Planar Graph}
+
+A graph is called a 1-planar graph if it can be drawn in the plane in such a way so that each its edge is crossed by at most one other edge. A 1-planar graph is a graph that has a 1-planar drawing. \Cref{fig:1p} shows 1-Planar Graph.
+\\
+
+
+\begin{figure}[!tb]
+ \centering
+\resizebox{50mm}{!}{\input{figures/1p.pdf_tex}}
+\caption{1-Planar Graph.}
+\label{fig:1p}
+\end{figure}
+
+
+It is shown by Fabrici and Madaras  \cite{madaras} that each 1-planar graph contains a vertex of degree at most 7; they also proved that each 3-connected 1-planar graph contains an edge with both end vertices of degrees at most 20. The relationship between RAC graphs and 1-planar graphs \cite{p} have also shown by Eades and Liotta.
+
+
+
+\subsection{2-Planar Graphs}
+
+A graph is called a 2-Planar Graph if it can be drawn in the plane in such a way so that each its edge is crossed by at most two other edge. A 2-planar graph is a graph that has a 2-planar drawing.
+Pach and Toth have shown that 2-planar graphs with $n$ vertices have at most $5n-10$ edges and this bound is tight.
+\\
+\textbf{Hermits} are vertices of degree 1 or 2 which are enclosed by crossing edges and cannot be connected to other vertices. \Cref{fig:2p} (a) shows simple 2-Planar Graph and (b) shows 2-Planar Graph with dot Hermits vertics.
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{150mm}{!}{\input{figures/2p.pdf_tex}}
+\caption{(a) A 2-Planar Graph ; (b) A 2-Planar Graph with Hermits vertices.}
+\label{fig:2p}
+\end{figure}
+
+
+In recent years, several works are devoted to this field. In 2017 , \cite{michael} shows the optimal 2- and 3- Planar Graphs.and \cite{Christopher} shows On sparse maximal 2-planar Graphs. However, There is no complete results about 2-Planar Graphs.
+
+
+
+\subsection{Bar k-Visibility Graphs}
+
+Bar k-visibility graphs have been introduced by Dean, Evans, Gethner, Laison, Safari and Trotter \cite{M}. Bars are allowed to see through at most k other bars in a bar k-visibility graphs.They seek measurements of closeness to planarity for bar k-visibility graphs since all bar visibility graphs are planar and they obtain an upper bound on the number of edges in a bar k-visibility graph.
+
+
+
+\section{Numbering}
+\label{number}
+
+In this section we show the techniques of standard graph numbering (st-Numbering) used
+throughout this thesis.
+
+
+\subsection{st-Numbering}
+
+Lempel et. al. \cite{Even} states that every biconnected graph has an st-numbering. The st-numbering of a graph is not unique, it is like a Simple Graph $G$.Using an st-numbering of $G$, we can represent the edges of $G$ from lower numbered vertex to higher-numbered vertex.
+\\
+Assume, $s$ and $t$ be any two vertices of $G$. A $st-numbering$ of
+$G$ is a numbering of its vertices by integers $1, 2, \ldots , n$ such that a vertex $s$
+receives number $1$, a vertex $t$ receives number $n$ and every other vertex of
+$G$ is adjacent to at least one lower-numbered vertex and at least one higher numbered vertex.
+In \Cref{fig:st} (a) shows the Simple Graph $G$ and (b),(c),(d) shows the st-Numbering for the graph $G$.
+
+
+
+\begin{figure}[!tb]
+  \centering
+\resizebox{100mm}{!}{\input{figures/st.pdf_tex}}
+\caption{(a)Simple Graph $G$ ; (b),(c) and (d) st-Numbering.}
+\label{fig:st}
+\end{figure}
+
+
+
+\section{Drawing Conventions of Planar Graphs}
+\label{dcpg}
+
+In this section, we introduce some important drawings used in the remainder of the thesis.
+
+\subsection{Planar Drawings}
+
+A graph is a Planar Drawings graph if no two edges intersect with each other except at their common end-vertices. \Cref{fig:planar_drawings} (a) is a planar drawing, (b)is the non-planar drawing of the graph drawn in (a).
+
+\begin{figure}[!tb]
+\centering
+\resizebox{150mm}{!}{\input{figures/planar_drawings.pdf_tex}}
+\caption{(a) A planar drawing ; (b) A non-planar drawing of the graph drawn in (a) ; (c) A graph which has not planar drawing.}
+\label{fig:planar_drawings}
+\end{figure}
+
+But unfortunately, not all graphs have a planar drawing. \Cref{fig:planar_drawings} (c) is an example of one such graph.
+
+
+\subsection{Straight-line Drawings}
+
+In straight-line drawing of a graph $G$, each edge is drawn as a straight line segment. \Cref{fig:straight_line_drawing}, all edges are represents as straight line segments. Fary \cite{fary} and Stein \cite{stein} proved that every planar graph has a straight line drawing.
+
+\begin{figure}[!tb]
+\centering
+\resizebox{20mm}{!}{\input{figures/straight_line_drawing.pdf_tex}}
+\caption{A Straight-line Drawing}
+\label{fig:straight_line_drawing}
+\end{figure}
+
+
+
+
+\subsection{Grid Drawings}
+
+A drawing of a graph is called a grid drawing if the vertices are all located at grid points of an integer grid as show in \Cref{fig:grid_drawings}.
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{50mm}{!}{\input{figures/grid_drawings.pdf_tex}}
+\caption{A Grid Drawing.}
+\label{fig:grid_drawings}
+\end{figure}
+
+
+
+\subsection{Visibility Drawings}
+
+Assume, $B$ is a set of horizontal nonoverlapping segments in the plane. Two segments $b, b^\prime$ of $B$ are said to be visible if they can be joined by a vertical segment not intersecting any other segment of $B$. Furthermore, $b$ and $b^\prime$ are called ${\epsilon}$-visible if they can be joined by a vertical band of nonzero width that does not intersect any other segment of $B$. This is equivalent to saying that $b$ and $b^\prime $ can be joined by two distinct vertical segments not intersecting any other segment of $B$ .
+\\
+
+A w-visibility representation for a graph $G = (V, E)$ is a mapping of vertices of $G$ into nonoverlapping horizontal segments (called vertex-segments) and of edges of $G$ into vertical segments (called edge-segments) such that, for each edge $(u, v) \in E$, the associated edge-segment has its endpoints on the vertex-segments corresponding to $u$ and $v$, and it does not cross any other vertex-segment.\Cref{fig:visidraw}(b)
+\\
+
+An ${\epsilon}$-visibility representation for a graph $G$ is a w-visibility representation with the additional property that two vertex-segments are ${\epsilon}$ -visible if and only if the corresponding vertices of $G$ are adjacent.\Cref{fig:visidraw}(c)
+\\
+
+An $s$-visibility representation for a graph $G$ is a w-visibility representation with additional property that two vertex-segments are visible if and only if the corresponding vertices of $G$ are adjacent. \Cref{fig:visidraw}(d)
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{170mm}{!}{\input{figures/visidraw.pdf_tex}}
+\caption{(a) A planar Graph $G$;(b) w-visibility representation; (c)${\epsilon}$-visibility representation; (d) s-visibility representation.}
+\label{fig:visidraw}
+\end{figure}
+
+
+
+
+\section{Drawing Conventions of Non-Planar Graphs}
+\label{dcng}
+
+In this section we introduce some Non-planar Graphs, which are
+found suitable in different application domain. In \ref{1pd} and \ref{2pd} the most important
+drawing styles are introduced.
+
+
+
+
+
+
+\subsection{1-Planar Drawing}
+\label{1pd}
+
+A 1-planar drawing is a drawing of a graph where an edge can be crossed by at most one edges (\Cref{fig:1pd}). A 1-planar graph is a graph that has a 1-planar drawing.
+
+
+
+\begin{figure}[!tb]
+\centering
+\resizebox{40mm}{!}{\input{figures/1pd.pdf_tex}}
+\caption{1-planar drawing of a graph.}
+\label{fig:1pd}
+\end{figure}
+
+
+
+\subsection{2-Planar Drawing}
+\label{2pd}
+
+A 2-planar drawing is a drawing of a graph where an edge can be crossed by at most two edges (\Cref{fig:2p}). A 2-planar graph is a graph that has a 2-planar drawing.
+
+
+
+\section{Complexity of Algorithms}
+\label{complexity}
+
+\endinput
