@@ -4,7 +4,7 @@
 
 In this chapter, we define some basic terminology of graph theory, graph
 drawing and algorithm theory, that we will use the rest of this
-thesis.Definitions which are not included in this chapter will be introduced
+thesis. Definitions which are not included in this chapter will be introduced
 as they are needed. We review, in \ref{basic}, some definitions of standard
 graph-theoretical terms. In \ref{special}, we discuss about some special classes
 of graphs that are important for the ideas and concepts used in the later
@@ -23,9 +23,9 @@ use throughout this thesis.
 
 \subsection{Graphs}
 
-Graph is a collection of points, called vertices($V$), and lines between those points, called edges($E$).In \Cref{fig:graph} shows a graph $G = (V, E)$ where each vertex in $ V = {v1, v2, \ldots , v4}$
+Graph is a collection of points, called vertices ($V$), and lines between those points, called edges ($E$). In \Cref{fig:graph} shows a graph $G = (V, E)$ where each vertex in $ V = {v1, v2, \ldots , v4}$
 is drawn as a small circle and each edge in $E = {e1, e2, \ldots , e5}$ is drawn by
-a line segment. Vertices are connecting to eachother by edges.
+a line segment. Vertices are connecting to each other by edges.
 
 \begin{figure}[!tb]
   \centering
@@ -46,7 +46,7 @@ a line segment. Vertices are connecting to eachother by edges.
 If a graph $G$ has no \emph{multiple edges} or \emph{loops}, then $G$ is said to be a
 simple graph. In \Cref{fig:simple_multi}, (a) is a simple graph.
 \\
-A graph in which loops and multiple edges are allowed is called a Multigraph.It can arise from various applications.\Cref{fig:simple_multi} shows (b) is multigraph. 
+A graph in which loops and multiple edges are allowed is called a Multigraph. It can arise from various applications. \Cref{fig:simple_multi} shows (b) is multigraph. 
 
 
 
@@ -95,7 +95,7 @@ A subgraph $S$ of a graph $G$ is a graph whose set of vertices and set of edges 
 
 
 \subsection{Connected Graph}
-A Graph in which there is a path joining each pair of vertices, the graph being undirected. It is always possible to travel in a connected graph between one vertex and any other; no vertex is isolated. If a graph is not connected it will consist of several components, each of which is connected; such a graph is said to be disconnected.\Cref{fig:connectivity} (a) shows the Connected Graph by dot edge. and (b) shows the graph becomes disconnected when the dot edge is removed.
+A Graph in which there is a path joining each pair of vertices, the graph being undirected. It is always possible to travel in a connected graph between one vertex and any other; no vertex is isolated. If a graph is not connected it will consist of several components, each of which is connected; such a graph is said to be disconnected. \Cref{fig:connectivity} (a) shows the Connected Graph by dot edge and (b) shows the graph becomes disconnected when the dot edge is removed.
 
 
 \begin{figure}[!tb]
@@ -117,7 +117,7 @@ to planar graphs and non planar graphs (1-Planar Graphs and 2-Planar Graphs) use
 
 \subsection{Planar Graphs and Plane Graphs}
 
-A planar graph is a graph that can be embedded in the plane. It can be drawn on the plane in such a way that its edges intersect only at their endpoints. In other words, it can be drawn in such a way that no edges cross each other. \Cref{fig:planar} shows multiple planar embeddings of the same planar graphs.
+A planar graph is a graph that can be embedded in the plane. It can be drawn on the plane in such a way that its edges intersect only at their endpoints. In other words, it can be drawn in such a way that no edges cross each other. \Cref{fig:planar} shows multiple planar embedding of the same planar graphs.
 \\
 
 A plane graph can be defined as a planar graph with a mapping from every node to a point on a plane, and from every edge to a plane curve on that plane, such that the extreme points of each curve are the points mapped from its end nodes, and all curves are disjoint except on their extreme points.
@@ -125,7 +125,7 @@ A plane graph can be defined as a planar graph with a mapping from every node to
 \begin{figure}[!tb]
   \centering
 \resizebox{150mm}{!}{\input{figures/planar.pdf_tex}}
-\caption{Three planar embeddings of the same planar graph.}
+\caption{Three planar embedding of the same planar graph.}
 \label{fig:planar}
 \end{figure}
 
@@ -167,7 +167,7 @@ It is shown by Fabrici and Madaras  \cite{madaras} that each 1-planar graph cont
 A graph is called a 2-Planar Graph if it can be drawn in the plane in such a way so that each its edge is crossed by at most two other edge. A 2-planar graph is a graph that has a 2-planar drawing.
 Pach and Toth have shown that 2-planar graphs with $n$ vertices have at most $5n-10$ edges and this bound is tight.
 \\
-\textbf{Hermits} are vertices of degree 1 or 2 which are enclosed by crossing edges and cannot be connected to other vertices. \Cref{fig:2p} (a) shows simple 2-Planar Graph and (b) shows 2-Planar Graph with dot Hermits vertics.
+\textbf{Hermits} are vertices of degree 1 or 2 which are enclosed by crossing edges and cannot be connected to other vertices. \Cref{fig:2p} (a) shows simple 2-Planar Graph and (b) shows 2-Planar Graph with dot Hermits vertices.
 
 
 \begin{figure}[!tb]
@@ -178,42 +178,39 @@ Pach and Toth have shown that 2-planar graphs with $n$ vertices have at most $5n
 \end{figure}
 
 
-In recent years, several works are devoted to this field. In 2017 , \cite{michael} shows the optimal 2- and 3- Planar Graphs.and \cite{Christopher} shows On sparse maximal 2-planar Graphs. However, There is no complete results about 2-Planar Graphs.
+In recent years, several works are devoted to this field. In 2017, \cite{michael} shows the optimal 2 and 3-Planar Graphs and \cite{Christopher} shows On sparse maximal 2-planar Graphs. However, There is no complete results about 2-Planar Graphs.
 
 
 
 \subsection{Bar k-Visibility Graphs}
 
-Bar k-visibility graphs have been introduced by Dean, Evans, Gethner, Laison, Safari and Trotter \cite{M}. Bars are allowed to see through at most k other bars in a bar k-visibility graphs.They seek measurements of closeness to planarity for bar k-visibility graphs since all bar visibility graphs are planar and they obtain an upper bound on the number of edges in a bar k-visibility graph.
+Bar k-visibility graphs have been introduced by Dean, Evans, Gethner, Laison, Safari and Trotter \cite{M}. Bars are allowed to see through at most k other bars in a bar k-visibility graphs. They seek measurements of closeness to planarity for bar k-visibility graphs since all bar visibility graphs are planar and they obtain an upper bound on the number of edges in a bar k-visibility graph.
 
 
 
 \section{Numbering}
 \label{number}
 
-In this section we show the techniques of standard graph numbering (st-Numbering) used
+The section \cref{number} shows the techniques of standard graph numbering (st-Numbering) used
 throughout this thesis.
 
 
-\subsection{st-Numbering}
+\subsection{st - Numbering}
 
-Lempel et. al. \cite{Even} states that every biconnected graph has an st-numbering. The st-numbering of a graph is not unique, it is like a Simple Graph $G$.Using an st-numbering of $G$, we can represent the edges of $G$ from lower numbered vertex to higher-numbered vertex.
+Lempel et. al. \cite{Even} states that every bi-connected graph has an st-numbering. The st-numbering of a graph is not unique, it is like a Simple Graph $G$. Using an st-numbering of $G$, we can represent the edges of $G$ from lower numbered vertex to higher-numbered vertex.
 \\
 Assume, $s$ and $t$ be any two vertices of $G$. A $st-numbering$ of
 $G$ is a numbering of its vertices by integers $1, 2, \ldots , n$ such that a vertex $s$
 receives number $1$, a vertex $t$ receives number $n$ and every other vertex of
 $G$ is adjacent to at least one lower-numbered vertex and at least one higher numbered vertex.
-In \Cref{fig:st} (a) shows the Simple Graph $G$ and (b),(c),(d) shows the st-Numbering for the graph $G$.
-
-
+In \Cref{fig:st} (a) shows the Simple Graph $G$ and (b), (c), (d) shows the st-Numbering for the graph $G$.
 
 \begin{figure}[!tb]
   \centering
 \resizebox{100mm}{!}{\input{figures/st.pdf_tex}}
-\caption{(a)Simple Graph $G$ ; (b),(c) and (d) st-Numbering.}
+\caption{(a) Simple Graph $G$ ; (b), (c) and (d) st-Numbering.}
 \label{fig:st}
 \end{figure}
-
 
 
 \section{Drawing Conventions of Planar Graphs}
@@ -223,7 +220,7 @@ In this section, we introduce some important drawings used in the remainder of t
 
 \subsection{Planar Drawings}
 
-A graph is a Planar Drawings graph if no two edges intersect with each other except at their common end-vertices. \Cref{fig:planar_drawings} (a) is a planar drawing, (b)is the non-planar drawing of the graph drawn in (a).
+A graph is a Planar Drawings graph if no two edges intersect with each other except at their common end-vertices. \Cref{fig:planar_drawings} (a) is a planar drawing, (b) is the non-planar drawing of the graph drawn in (a).
 
 \begin{figure}[!tb]
 \centering

@@ -1,22 +1,23 @@
+
 \chapter{Bar 2-Visibility Representations of 2-Planar Graphs}\label{2visibility}
 
 
 \section{Introduction}
 
-In \Cref{sec:2pg} we define about 2-planar graphs. In this chapter we show how to transform a 2-planar graphs into bar 2-visibility representations.
+In \Cref{sec:2pg} we defined 2-planar graphs. In this chapter we show how to transform a 2-planar graphs into bar 2-visibility representations.
 
 
 \section{Numbering of non-planar graph}
 \label{stnnpg}
-we know st-numbering is apply on planar graph\cite{{Alempel}}. There is no algorithm or rules of st-numbering on non-planar graph. We develop a theorem\ref{stnp} and an algorithm\ref{stn} for st-numbering on non-planar graph.
+we know st-numbering can be applied on planar graph\cite{{Alempel}}. There is no algorithm of st-numbering on non-planar graph. We developed a theorem\ref{stnp} and an algorithm\ref{stn} for st-numbering on non-planar graph.
 \\
 
-In \Cref{fig:stnum}(a) we draw a 2-planar graph which has no number. To represent this graph into st-numbering, we insert temporary vertex at every crossing point on the 2-planar graph. IN \Cref{fig:stnum}(b), we insert temporary vertex in all crossing points. After that, we delete the temporary vertex so that the graph becomes 2-planar to planar graph. \Cref{fig:stnum}(c) is now planar graph. Now we apply the rule of st-numbering and insert number to the graph \Cref{fig:stnum}(d). Finally all the crossing points that had been deleted by temporary vertex(\Cref{fig:stnum}(b)) will reinserted \Cref{fig:stnum}(e).
+In \Cref{fig:stnum}(a) we draw a 2-planar graph which has no number. To represent this graph into st-numbering, we insert temporary vertex at every crossing point on the 2-planar graph [\Cref{fig:stnum}(b)]. After that, we delete the temporary vertices so that the graph becomes 2-planar to planar graph. \Cref{fig:stnum}(c) is now planar graph. Now we apply the rule of st-numbering and insert number to the graph \Cref{fig:stnum}(d). Finally all the crossing points that had been deleted by temporary vertex(\Cref{fig:stnum}(b)) will be reinserted \Cref{fig:stnum}(e).
 
 \begin{figure}[!tb]
 \centering
 \resizebox{150mm}{!}{\input{figures/stnum.pdf_tex}}
-\caption{(a)2-planar Graph; (b)Insert vertex on crossing point in the 2-planar graph; (c)Planar Graph $G$; (d)st-numbering on planar graph $G$; (e)2-planar graph with st-numbering. }
+\caption{(a)2-planar Graph; (b)Insert vertex on crossing point in the 2-planar graph; (c)Planar Graph $G$; (d)st-numbering on planar graph $G$; (e)2-planar graph with st-numbering.}
 \label{fig:stnum}
 \end{figure}
 
@@ -51,7 +52,7 @@ In this section we show that every 2-planar graph $G$ has a bar 2-visibility rep
 
 
 
-\item Every 2-planar with 2 edges configuration can direct transform into planar by removing the crossing point. If we remove the crossing point from 2-planar with 2 edges configuration, configuration will become Planar \Cref{fig:2planar2edges}.
+\item Every 2-planar with 2 edges configuration can directly transform into planar graph by removing the crossing point. If we remove the crossing point from 2-planar with 2 edges configuration, configuration will become Planar \Cref{fig:2planar2edges}.
 
 
 
@@ -91,12 +92,12 @@ In 2-planar with 3 edges configuration, the edge pair that contains largest numb
 \item 
 In Multi-configuration, the crossing point that contains highest two largest number of vertices by st-numbering will be removed until the configuration transform into single configurations.\Cref{fig:multistar}
 
-In \Cref{fig:multistar}(a) the 1st two largest vertex number is $5$ and $4$. so we remove the crossing ponit of  vertex   $5$ and $4$. Edge $5-3$ is crossing with edge $4-2$ and $4-1$. Between edge pair $4-2$ and $4-1$ vertex 2 is greater than 1, So edge $4-2$ will remove with edge $5-3$ as crossing point. After removing the 2-planar crossing point $5-3$ \& $4-2$ , \Cref{fig:multistar}(b) becomes  single configuration.  Edge $1-4$ will deleted between edge $1-4$ \& $1-3$ since vertex $4$ is higher than vertex $3$. In \Cref{fig:multistar}(c), Now the configuration becomes 1-planar x-configuration.  
+In \Cref{fig:multistar}(a) the first two largest vertex number is $5$ and $4$. so we remove the crossing ponit of vertex $5$ and $4$. Edge $5-3$ is crossing with edge $4-2$ and $4-1$. Between edge pair $4-2$ and $4-1$ vertex 2 is greater than 1, So edge $4-2$ will remove with edge $5-3$ as crossing point. After removing the 2-planar crossing point $5-3$ \& $4-2$ , \Cref{fig:multistar}(b) becomes single configuration. Edge $1-4$ will deleted between edge $1-4$ \& $1-3$ since vertex $4$ is higher than vertex $3$. In \Cref{fig:multistar}(c), Now the configuration becomes 1-planar x-configuration.  
 
 \begin{figure}[!tb]
 \centering
 \resizebox{150mm}{!}{\input{figures/multistar.pdf_tex}}
-\caption{Multiconfiguartion Transformation. (a) Multiconfiguration ; (b)Single-Configuration ; (c)x-configuration ; (d) A face}
+\caption{Multiconfiguartion Transformation. (a)Multiconfiguration; (b)Single-Configuration; (c)x-configuration; (d) A face}
 \label{fig:multistar}
 \end{figure}
 
@@ -105,17 +106,17 @@ In \Cref{fig:multistar}(a) the 1st two largest vertex number is $5$ and $4$. so 
 
 \begin{lemma}
 \label{231}
-If the configuration is simple configuration and the configuration is not 2-planar with 3 edges, Temporary delete the crossing point which is consist of 1st two highest number of vertices and if the configuration is 2-planar with 3 edges, The highest vertex number of edges will be temporary deleted from the  configuration so that configuration becomes 1-planar configuration.
+If the configuration is simple configuration and is not 2-planar with 3 edges, delete the crossing point which is consist of first two highest number of vertices temporarily and if the configuration is 2-planar with 3 edges, The highest vertex number of edges will be temporarily deleted from the configuration so that configuration becomes 1-planar configuration.
 \end{lemma}
 
 
 
 \begin{lemma}
 \label{2m1}
-If first two highest number of vertex are connected multiple times with eachother, we will select the edge that has highest number of vertex between two vertex for temporary deleting the crossing points.
+If first two highest number of vertex are connected multiple times with each other, we will select the edge that has highest number of vertex between two vertex for temporary deleting the crossing points. \textbf{\textcolor{red}{ei line ta deikhen ektu}}
 \end{lemma}
 
-By lemma[\ref{231},\ref{2m1}] we can transform the embedding 2-planar graphs $E(G)$ into embedding 1-planar graphs $E(G{^\prime})$. When the 2-planar graphs transform into 1-planar graphs , 1-planar graph will have 1-planar configuration. After transform the embedding 2-planar graph $E(G)$ to 1-planar graph $E(G{^\prime})$, we will convert the 1-planar graph $E(G{^\prime})$ to planar graph $E(G{^\prime}{^\prime})$
+By lemma[\ref{231},\ref{2m1}] we can transform the embedding 2-planar graphs $E(G)$ into embedding 1-planar graphs $E(G{^\prime})$. When the 2-planar graphs transform into 1-planar graphs, 1-planar graph will have 1-planar configuration. After transforming the embedding 2-planar graph $E(G)$ to 1-planar graph $E(G{^\prime})$, we will convert the 1-planar graph $E(G{^\prime})$ to planar graph $E(G{^\prime}{^\prime})$
 
 
 \begin{lemma}
@@ -140,19 +141,15 @@ We convert the 2-planar graphs to planar graphs. Using Tammassia and Tollis \cit
 \label{1cpca}
 
 \begin{algorithmic}[1]
-\STATE if face is a left-wing,then\\
-{At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40.
-then  we'll insert the 2nd largest node number edge segment  by expanding the vertex segment length 0.60.}
-\STATE 
-if face is a Right-wing, 
-then\\
-{At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40.
-then  we'll insert the 2nd largest node number edge segment  by expanding the vertex segment length 0.60.}
-\STATE 
-if face is a diamond, then
- \\
-{ At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40.
-then  we'll insert the 2nd largest node number edge segment  by expanding both edge pair vertex segment length 0.60 from that side we insert previous edge-segment.}
+\IF{ face f is a left-wing}
+{At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40. Then  we'll insert the 2nd largest numbered node edge segment  by expanding the vertex segment length 0.60.}
+\ENDIF
+\IF{face $f$ is a Right-wing}
+{At first we'll insert the 1st largest  numbered node edge segment  by expanding the vertex segment length 0.40.
+then  we'll insert the 2nd largest numbered node edge segment  by expanding the vertex segment length 0.60.}
+\ENDIF
+\IF{ face $f$ is a diamond}
+{ At first we'll insert the 1st largest numbered node edge segment  by expanding the vertex segment length 0.40. Then  we'll insert the 2nd largest numbered node edge segment  by expanding both edge pair vertex segment length 0.60 from that side we insert previous edge-segment.} \ENDIF
 \end{algorithmic}
 \end{algorithm}
 
@@ -165,11 +162,11 @@ After converting planar visibility representation to bar 1-visibility representa
 \label{2pcei}
 \begin{algorithmic}[1]
 
-\STATE if the deleted crossing edge is from that vertex which has another crossing edge then\\
+\IF{the deleted crossing edge is from that vertex which has another crossing edge}
 The edge segment will inserting by expanding the vertex length 0.20.
-\STATE else \\
+\ELSE
 The edge segment will inserting by expanding the vertex length 0.60.
-
+\ENDIF
 \end{algorithmic}
 \end{algorithm}
 
@@ -181,11 +178,11 @@ The edge segment will inserting by expanding the vertex length 0.60.
 
 \STATE if face is a left-wing then,\\
 
-largest node number  egde will inserted by expanding the vertex segment  0.60 or 0.80
-another edge will inserted between grid 0.20 to 0.80  by expanding the vertex segment.
+largest node number edge will inserted by expanding the vertex segment 0.60 or 0.80
+another edge will inserted between grid 0.20 to 0.80 by expanding the vertex segment.
 \STATE if face is a right-wing then,\\
 
-largest node number egde will inserted by expanding the vertex segment  0.60 or 0.80
+largest node number edge will inserted by expanding the vertex segment 0.60 or 0.80
 another edge will inserted between grid 0.20 to 0.80 by expanding the vertex segment where expansion priority is 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
 \STATE if face is a diamond then,\\
 largest node number edge will inserted in the grid by expanding the vertex segment between 0.60 to 0.80 (expansion priority 0.60\textgreater 0.80)
@@ -203,9 +200,9 @@ another edge will inserted in the grid by expanding the vertex segment between 0
 \label{ncpi}
 \begin{algorithmic}[1]
 
-\STATE Largest node number edge will inserted in the grid by expanding the vertex segment 0.20 to 0.80  where  expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
+\STATE Largest node number edge will inserted in the grid by expanding the vertex segment 0.20 to 0.80 where expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
 \\
-\STATE Another edge will inserted in the grid by expanding the vertex segment 0.20 to 0.80  where  expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
+\STATE Another edge will inserted in the grid by expanding the vertex segment 0.20 to 0.80 where expansion priority 0.20\textgreater 0.40\textgreater 0.60\textgreater 0.80
 \end{algorithmic}
 \end{algorithm}
 
@@ -228,7 +225,7 @@ another edge will inserted in the grid by expanding the vertex segment between 0
 
 
 
-\Cref{fig:2planar2edgesvisi} is the Visibility Representations of 2-Planar with 2 Edges Configuration. In {fig:2planar2edgesvisi}(a), edge pair (2,4) and (1,5) crossing with eachother atmost 2 times. {fig:2planar2edgesvisi}(b) is the visibility representatios of {fig:2planar2edgesvisi}(a) where edge segment of (1,5) is crossed by 2 vertex segment.
+\Cref{fig:2planar2edgesvisi} is the Visibility Representations of 2-Planar with 2 Edges Configuration. In \cref{fig:2planar2edgesvisi}(a), edge pair (2,4) and (1,5) crossing with eachother atmost 2 times. {fig:2planar2edgesvisi}(b) is the visibility representatios of {fig:2planar2edgesvisi}(a) where edge segment of (1,5) is crossed by 2 vertex segment.
 
 \begin{figure}[!tb]
 \centering
@@ -241,7 +238,7 @@ another edge will inserted in the grid by expanding the vertex segment between 0
 
 \label{2p3ev}
 
-\Cref{fig:2planar3edgesvisi} is the Visibility Representations of 2-Planar with 3 Edges Configuration.  {fig:2planar2edgesvisi}(b), is the visibility representations of {fig:2planar2edgesvisi}(a).In {fig:2planar2edgesvisi}(a), every vertex has single crossing edge,so in visibility representation of {fig:2planar2edgesvisi}(a) the crossing edge pair will inserted by expand the vertex length 0.60 which is shown in {fig:2planar2edgesvisi}(b). In \Cref{fig:2planar3edgesvisi}(a) crossing edge (3,6) is crossed by 2 edges and in \Cref{fig:2planar3edgesvisi}(b), edge segment (3,6) is crossed by two vertex.  In the other side, \Cref{fig:2planar3edgesvisi}(c) and \Cref{fig:2planar3edgesvisi}(e) are type because in \Cref{fig:2planar3edgesvisi}(c) vertex no. 2 has two crossing edge pair and in \Cref{fig:2planar3edgesvisi}(e), vertex no. 1 has two crossing edge pair. So the deleted crossing edge will inserted by expand the vertex segment 0.20. \Cref{fig:2planar3edgesvisi}(d) is the visibility representation of \Cref{fig:2planar3edgesvisi}(c) and \Cref{fig:2planar3edgesvisi}(f) is the visibility representation of \Cref{fig:2planar3edgesvisi}(e).
+\Cref{fig:2planar3edgesvisi} is the Visibility Representations of 2-Planar with 3 Edges Configuration. \cref{fig:2planar2edgesvisi}(b), is the visibility representations of \cref{fig:2planar2edgesvisi}(a).In \cref{fig:2planar2edgesvisi}(a), every vertex has single crossing edge,so in visibility representation of \cref{fig:2planar2edgesvisi}(a) the crossing edge pair will inserted by expand the vertex length 0.60 which is shown in \cref{fig:2planar2edgesvisi}(b). In \Cref{fig:2planar3edgesvisi}(a) crossing edge (3,6) is crossed by 2 edges and in \Cref{fig:2planar3edgesvisi}(b), edge segment (3,6) is crossed by two vertex. In the other side, \Cref{fig:2planar3edgesvisi}(c) and \Cref{fig:2planar3edgesvisi}(e) are type because in \Cref{fig:2planar3edgesvisi}(c) vertex no. 2 has two crossing edge pair and in \Cref{fig:2planar3edgesvisi}(e), vertex no. 1 has two crossing edge pair. So the deleted crossing edge will inserted by expand the vertex segment 0.20. \Cref{fig:2planar3edgesvisi}(d) is the visibility representation of \Cref{fig:2planar3edgesvisi}(c) and \Cref{fig:2planar3edgesvisi}(f) is the visibility representation of \Cref{fig:2planar3edgesvisi}(e).
 
 
 
@@ -289,7 +286,7 @@ Face $f$ changing depends on st-Numbering. Face can be 3 types: left wing, right
 \\
 In left wing \Cref{fig:starvisi} the vertex  expand from left side of the face. Similarly we can draw for right wing where vertex expand from right side in the face \Cref{fig:rightwing}. In Diamond, vertex-segments length expand from both left and right side \Cref{fig:diamondstep}.
 \\
-For face , At fist we apply 1-Planar crossing point insertion\ref{1pcpa} algorithm.  At first we'll insert the 1st largest node number edge segment  by expanding the vertex segment length 0.40. And then  we'll insert the 2nd largest node number edge segment  by expanding the vertex segment length 0.60. Then  we apply 2-Planar Crossing Insertion \ref{2pcpi} algorithm.
+For face \textcolor{red}{for face what???}, At fist we apply 1-Planar crossing point insertion\ref{1pcpa} algorithm. At first we'll insert the 1st largest node number edge segment by expanding the vertex segment length 0.40. And then we'll insert the 2nd largest node number edge segment by expanding the vertex segment length 0.60. Then we apply 2-Planar Crossing Insertion \ref{2pcpi} algorithm.
 
 
 
@@ -332,7 +329,7 @@ First take a embedding 2-connected 2-planar graph. Convert the 2-planar graph in
 \end{proof}
 
 \begin{algorithm}[H] 
-input : {A 2-planar embedding $E(G)$ of a 2-connected 2-planar graph $G$. } \\
+input : {A 2-planar embedding $E(G)$ of a 2-connected 2-planar graph $G$.} \\
 output : {A bar 2-visibility representation $T$ on a grid.}
 \caption{Bar 2-Visibility.}
 \label{b2vr}
@@ -408,7 +405,7 @@ output : {A bar 2-visibility representation $T$ on a grid.}
 
 
 \section{Conclusion}
-In this chapter, we reviewe important algorithm on constrained bar 2-visibility representation of 2-planar graphs. We have shown that every 2-planar graph is bar 2-visibility representation.
+In this chapter, we review important algorithm on constrained bar 2-visibility representation of 2-planar graphs. We have shown that every 2-planar graph is bar 2-visibility representation.
 
 
 
